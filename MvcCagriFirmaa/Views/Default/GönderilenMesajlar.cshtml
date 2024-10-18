@@ -1,0 +1,35 @@
+﻿@using MvcCagriFirmaa.Models.Entity;
+@model List<TblMesajlar>
+@{
+    ViewBag.Title = "GönderilenMesajlar";
+    Layout = "~/Views/Shared/FirmaLayout.cshtml";
+}
+
+<h2>GönderilenMesajlar</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>  ID  </th>
+        <th>  Alıcı  </th>
+        <th>  Konu  </th>
+        <th>  Mesaj  </th>
+        <th>  Tarih  </th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Alıcı</td>
+            <td>@x.Konu</td>
+            <td>@x.Mesaj</td>
+            <td>@x.Tarih</td>
+        </tr>
+
+    }
+
+
+
+
+
+</table>

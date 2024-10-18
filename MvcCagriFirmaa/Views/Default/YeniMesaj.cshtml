@@ -1,0 +1,31 @@
+﻿@model MvcCagriFirmaa.Models.Entity.TblMesajlar
+@{
+    ViewBag.Title = "YeniMesaj";
+    Layout = "~/Views/Shared/FirmaLayout.cshtml";
+}
+
+
+
+
+<h2> Mesaj Ekleme Sayfası</h2>
+<br />
+
+<form method="post">
+    @* sayfada  herhangi bir butona bastığımızda bu işlemler gerçekleştirilecek post metodu o işlevi görüyor *@
+    @Html.Label("Alıcı")
+    @Html.TextBoxFor(x => x.Alıcı, new { @type = "number", @class = "form-control" })
+    <br />
+    @Html.Label("Konu")
+    @Html.TextBoxFor(x => x.Konu, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mesaj")
+    @Html.TextAreaFor(x => x.Mesaj, 10, 4, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @type = "date", @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Mesaj Oluştur</button>
+
+</form>
+

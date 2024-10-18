@@ -1,0 +1,52 @@
+﻿@using MvcCagriFirmaa.Models.Entity;
+@model List<TblFirmalar>
+@{
+    ViewBag.Title = "ProfilGüncelle";
+    Layout = "~/Views/Shared/FirmaLayout.cshtml";
+}
+
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>  ID  </th>
+        <th>  Ad  </th>
+        <th>  Yetkili  </th>
+        <th>  Telefon  </th>
+        <th>  Mail  </th>
+        <th>  Sifre  </th>
+        <th>  Sektor  </th>
+        <th>  il  </th>
+        <th>  ilce  </th>
+        <th>  Adres  </th>
+        <th>  Görsel  </th>
+        
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Ad</td>
+            <td>@x.Yetkili</td>
+            <td>@x.Telefon</td>
+            <td>@x.Mail</td>
+            <td>@x.Sifre</td>
+            <td>@x.Sektor</td>
+            <td>@x.il</td>
+            <td>@x.ilce</td>
+            <td>@x.Adres</td>
+            <td>@x.Görsel</td>
+            <td> <a href="/Default/ProfilGetir/@x.ID" class="btn btn-success">Düzenle</a></td>
+
+        </tr>
+    }
+</table>
+
+
+
+
+
+
+
+

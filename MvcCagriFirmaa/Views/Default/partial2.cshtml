@@ -1,0 +1,34 @@
+﻿@using MvcCagriFirmaa.Models.Entity;
+@model List<TblCagrilar>
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-bell-o"></i><span class="badge blue">@ViewBag.m1</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li>
+            <div class="notification_header">
+                <h3>Aktif Çağrı bildirimleriniz</h3>
+            </div>
+        </li>
+        @foreach (var x in Model)
+        {
+            <li>
+                <a href="/Default/CagriDetay/@x.ID" class="grid">
+                    <div class="user_img"><img src="~/web2/starter/assets/images/bildirimicon.png" alt=""></div>
+                    <div class="notification_desc">
+                        <p>@x.Konu</p>
+                        <span>@x.Tarih</span>
+                    </div>
+                </a>
+            </li>
+            
+        }
+
+        <li>
+            <div class="notification_bottom">
+                <a href="/Default/PasifCagrilar" class="bg-primary">Tüm Çağrıları Gör</a>
+            </div>
+        </li>
+    </ul>
+</li>

@@ -1,0 +1,19 @@
+﻿@model MvcCagriFirmaa.Models.Entity.TblCagrilar
+@{
+    ViewBag.Title = "YeniCagri";
+    Layout = "~/Views/Shared/FirmaLayout.cshtml";
+}
+
+<h2>Yeni Cağri Ekleme Sayfası</h2>
+<br />
+
+<form  method="post">  @* sayfada  herhangi bir butona bastığımızda bu işlemler gerçekleştirilecek post metodu o işlevi görüyor *@
+    @Html.Label("Konu")
+    @Html.TextBoxFor(x => x.Konu, new { @class = "form-control" })
+    <br />
+    @Html.Label("Aciklama")
+    @Html.TextAreaFor(x => x.Aciklama, 10,4, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Çağrı Oluştur</button>
+
+</form>
